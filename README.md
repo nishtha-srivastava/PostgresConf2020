@@ -1,8 +1,8 @@
-SAP Cloud Platform (SCP) is an open platform-as-a-service (PaaS) product that provides core services, for building and extending cloud applications on multiple cloud IaaSes. SCP supports AWS, Azure, GCP, and Alibaba Cloud.
+# Improving RTO at Enterprise scale for PostgreSQL-as-a-Service on SAP Multi Cloud Platform
 
-> One of the core services provided by SCP is PostgreSQL as a Service (PostgreSQL-as-a-Service). Each PostgreSQL-as-a-Service instance consists of 5 VMs - Postgres-Master, Postgres-Standby, and 3-PGPOOL VMs. Data is replicated asynchronously from Postgres-Master to Postgres-Standby.
+SAP Cloud Platform (SCP) is an open platform-as-a-service (PaaS) which facilitates creating new cloud applications or extending existing applications and run them in a secure cloud environment managed by SAP. The SAP Cloud Platform integrates data and business processes. SCP supports multiple IaaSs like AWS, Azure, GCP, Alibaba Cloud and OpenStack.
 
-SCP manages more than 10000 PostgreSQL-as-a-Service instances across multiple IAASs.
+> One of the core platform backing services provided by SCP is PostgreSQL-as-a-Service. SCP manages more than 10000 PostgreSQL-as-a-Service instances across multiple IaaSs.
 
 ## Postgresql-as-a-Service - Backup & Recovery
 PostgreSQL-as-a-Service leverages the disk **Snapshots** offering of different IaaSes to take backups. Data directory of the Postgres instance is present on the persistent disk attached to the VMs on which Postgres is running. A snapshot of the persistent disk is created while taking backup. The snapshot service offering by IaaSes comes with in-built support for encryption and replication of Snapshots across multiple facilities. Backups are taken online, which means there is no downtime during the backup. One of the main advantages of physical backup is that it can support **Point-In-Time-Recovery**(PITR). This helps in recovering the database to any timestamp or a particular transaction ID. WAL logs are archived on cloud-provided storage service, to support PITR.
