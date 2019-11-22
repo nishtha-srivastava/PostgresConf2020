@@ -16,8 +16,9 @@ To overcome the data directory copy time during restore process which could be r
 
 ## Centralized Monitoring of Backup & Restore
 Backup and Restore related SLAs are agreed upon by stakeholders and customers, hence monitoring of these features are quite important. A **monitoring agent** runs on the instances to report its health metrics along with **backup status**.
-
-<img src="https://github.com/akashkumar58/pgconf/blob/master/backup-status.png" width="420" align="left"> <img src="https://github.com/akashkumar58/pgconf/blob/master/backupStatus.png" width="420" float="right">
+<p align="center">
+  <img src="https://github.com/nishtha-srivastava/PostgresConf2020/blob/master/postgres_backups_monitoring.PNG" width="600"/>
+</p>
 
 ## Alerting System for Backup & Restore
 In case when backup fails or after restore the service instance is not running, alerts are raised.
