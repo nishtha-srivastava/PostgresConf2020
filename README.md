@@ -22,5 +22,5 @@ Backup and Restore related SLAs are agreed upon by stakeholders and customers, h
 ## Alerting System for Backup & Restore
 In case when backup fails or after restore the service instance is not running, alerts are raised.
 <p align="center">
-  <img src="https://github.com/akashkumar58/pgconf/blob/master/backupAlert.png" width="600"/>
+  <img src="https://github.com/nishtha-srivastava/PostgresConf2020/blob/master/postgres_backup_failure_alert.png" width="600"/>
 </p>
