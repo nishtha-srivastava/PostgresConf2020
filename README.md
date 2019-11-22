@@ -15,12 +15,12 @@ This whole process took huge amount of time and **deteministic RTO could not be 
 To overcome the data directory copy time during restore process which could be really huge depending upon the data directory size.. the way restore was done was changed. Now restore involves creating disk from the backed-up snapshot of the concerned Postgres instance. This disk is *mounted* on the PostgreSQL VMs (primary & standby). The old persistent disk is released once the new disk is attached successfully. This whole restore process has been automated. The DB service downtime depends on the time taken for creating the disks from the snapshot. In case of PITR based restore, WAL logs are replayed after disks are attached. This helped in improving RTO of PostgreSQL-as-a-Service offering by a factor of 25 on SCP on many IaaSs like Azure, GCP. Restore is an on-demand event available as self-service to customer. 
 
 ## Centralized Monitoring of Backup & Restore
-Backup and Restore related SLAs are agreed upon by customers, hence monitoring of these features are quite important. A **monitoring agent** runs in every PostgreSQL VM to report its health metrics along with **backup status** of all the PostgreSQL cluster.
+Backup and Restore related SLAs are agreed upon by stakeholders and customers, hence monitoring of these features are quite important. A **monitoring agent** runs on the instances to report its health metrics along with **backup status**.
 
 <img src="https://github.com/akashkumar58/pgconf/blob/master/backup-status.png" width="420" align="left"> <img src="https://github.com/akashkumar58/pgconf/blob/master/backupStatus.png" width="420" float="right">
 
 ## Alerting System for Backup & Restore
-In case when backup fails or after restore the service instance is not running, email based alerts are raised.
+In case when backup fails or after restore the service instance is not running, alerts are raised.
 <p align="center">
   <img src="https://github.com/akashkumar58/pgconf/blob/master/backupAlert.png" width="600"/>
 </p>
