@@ -1,6 +1,6 @@
 # Improving RTO at Enterprise scale for PostgreSQL-as-a-Service on SAP Multi Cloud Platform
 
-SAP Cloud Platform (SCP) is an open platform-as-a-service (PaaS) which facilitates creating new cloud applications or extending existing applications and run them in a secure cloud environment managed by SAP. The SAP Cloud Platform integrates data and business processes. SCP supports multiple IaaSs like AWS, Azure, GCP, Alibaba Cloud and OpenStack.
+SAP Cloud Platform (SCP) is an open platform-as-a-service (PaaS) which facilitates creating new cloud applications or extending existing applications and run them in a secure cloud environment managed by SAP. The SAP Cloud Platform integrates data and business processes. SCP supports multiple Infrastructure-as-a-Service (IaaS) like AWS, Azure, GCP, Alibaba Cloud and OpenStack.
 
 > One of the core platform backing services provided by SCP is PostgreSQL-as-a-Service. SCP manages more than 10000 PostgreSQL-as-a-Service instances across multiple IaaSs. Each PostgreSQL-as-a-Service instance consists of VMs to have Postgres cluster - Postgres-Master, Postgres-Standby. Data is replicated asynchronously from Postgres-Master to Postgres-Standby. BOSH is used to automate large-scale Postgres deployments across different IaaSs.
 
